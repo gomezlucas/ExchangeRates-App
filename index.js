@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import { getRatesfromApi, getCurrenciesFromApi } from './cache.js';
+import { getRatesfromApi, getCurrenciesFromApi } from './src/cache.js';
 import {
   showCurrencies,
   setCurrentDate,
@@ -7,7 +7,7 @@ import {
   getCurrencySelected,
   showRates,
   showUpdateMessage,
-} from './ui.js';
+} from './src/ui.js';
 
 async function updateRates() {
   showUpdateMessage();
