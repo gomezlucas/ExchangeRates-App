@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import { getCurrenciesFromApi, getRatesfromApi } from './exchange.js';
+import { getRatesfromApi, getCurrenciesFromApi } from './cache.js';
 import {
   showCurrencies,
   setCurrentDate,
@@ -18,6 +18,7 @@ async function updateRates() {
 async function initializeSite() {
   showCurrencies(await getCurrenciesFromApi(), updateRates);
   setCurrentDate(updateRates);
+  updateRates();
 }
 
 initializeSite();
